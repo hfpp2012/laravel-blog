@@ -15,16 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users', function () {
-    $users = [
-        '0' => [
-            'first_name' => 'a',
-            'last_name' => 'b'
-        ],
-        '1' => [
-            'first_name' => 'c',
-            'last_name' => 'd'
-        ]
-    ];
-    return $users;
-});
+// Route::get('/users', function () {
+//     $users = [
+//         '0' => [
+//             'first_name' => 'a',
+//             'last_name' => 'b'
+//         ],
+//         '1' => [
+//             'first_name' => 'c',
+//             'last_name' => 'd'
+//         ]
+//     ];
+//     return $users;
+// });
+
+Route::get('/users', ['uses' => 'UsersController@index']);

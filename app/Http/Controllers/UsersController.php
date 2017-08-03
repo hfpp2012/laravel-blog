@@ -10,14 +10,15 @@ class UsersController extends Controller
     {
         $users = [
             '0' => [
-                'first_name' => 'a',
-                'last_name' => 'b'
+                'first_name' => 'Renato',
+                'last_name' => 'Hysa'
             ],
             '1' => [
-                'first_name' => 'c',
-                'last_name' => 'd'
+                'first_name' => 'Jessica',
+                'last_name' => 'Alba'
             ]
         ];
-        return $users;
+        // return $users;
+        return view('admin.users.index', compact('users'));
     }
 }
