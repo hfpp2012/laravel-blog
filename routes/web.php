@@ -32,3 +32,7 @@ Route::get('/', function () {
 Route::get('/users', 'UsersController@index');
 Route::get('/users/create', 'UsersController@create');
 Route::post('/users', 'UsersController@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
