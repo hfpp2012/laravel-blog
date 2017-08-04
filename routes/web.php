@@ -29,4 +29,4 @@ Route::get('/', function () {
 //     return $users;
 // });
 
-Route::get('/users', ['uses' => 'UsersController@index']);
+Route::get('/users', 'UsersController@index');
