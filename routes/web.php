@@ -30,3 +30,5 @@ Route::get('/', function () {
 // });
 
 Route::get('/users', 'UsersController@index');
+Route::get('/users/create', 'UsersController@create');
+Route::post('/users', 'UsersController@store');
