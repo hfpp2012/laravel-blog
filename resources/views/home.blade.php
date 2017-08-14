@@ -8,6 +8,10 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
+                    <h2>{{ Auth::user()->name }}</h2>
+                    <h2>{{ $myname }}</h2>
+                    <h2>{{ $age }}</h2>
+                    <h2>{{ $auth->name }}</h2>
                     You are logged in!
                 </div>
             </div>
