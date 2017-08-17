@@ -13,6 +13,9 @@
 
 Route::get('/', 'PagesController@index');
 
+Route::get('/profile', 'PagesController@profile');
+Route::get('/settings', 'PagesController@settings');
+
 // Route::get('/users', function () {
 //     $users = [
 //         '0' => [
