@@ -6,9 +6,28 @@
 
 @section('body')
     <div class="jumbotron">
-        <h1 class="display-3">Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+        <h1 class="display-3">
+            Your gender is
+            @if($gender == 'male')
+                male
+            @elseif($gender == 'female')
+                female
+            @else
+                unknown
+            @endif
+        </h1>
+        <p class="lead">
+            @unless(empty($text))
+                {{ $text }}
+            @endunless
+
+            @if(!empty($text))
+                {{ $text }}
+            @endif
+        </p>
+
+        <p>{{ isset($variableDoesNotExist) ? $variableDoesNotExist : 'The variable does not exist' }}</p>
+        <p>{{ $variableDoesNotExist or 'This really does not exist' }}</p>
     </div>
 
     <div class="row marketing">

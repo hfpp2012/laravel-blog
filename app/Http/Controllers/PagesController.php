@@ -30,6 +30,8 @@ class PagesController extends Controller
 
     public function blade()
     {
-        return view('blade.bladetest');
+        $gender = 'femffffale';
+        $text = 'Hello there!';
+        return view('blade.bladetest', compact('gender', 'text'));
     }
 }
