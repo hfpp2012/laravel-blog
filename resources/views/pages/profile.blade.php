@@ -11,6 +11,9 @@
                     <p>{{ $married }}</p>
                     <p>{{ $test }}</p>
                     <p>{{ $age }}</p>
+                    <?php
+                        echo $test;
+                    ?>
                 </div>
             </div>
         </div>

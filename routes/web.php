@@ -13,8 +13,10 @@
 
 Route::get('/', 'PagesController@index');
 
-Route::get('/profile', 'PagesController@profile');
-Route::get('/settings', 'PagesController@settings');
+Route::get('profile', 'PagesController@profile');
+Route::get('settings', 'PagesController@settings');
+
+Route::get('blade', 'PagesController@blade');
 
 // Route::get('/users', function () {
 //     $users = [
@@ -30,10 +32,10 @@ Route::get('/settings', 'PagesController@settings');
 //     return $users;
 // });
 
-Route::get('/users', 'UsersController@index');
-Route::get('/users/create', 'UsersController@create');
-Route::post('/users', 'UsersController@store');
+Route::get('users', 'UsersController@index');
+Route::get('users/create', 'UsersController@create');
+Route::post('users', 'UsersController@store');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
