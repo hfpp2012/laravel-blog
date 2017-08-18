@@ -20,28 +20,11 @@
   <body>
 
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Project name</h3>
-      </div>
+      @include('layouts.menu')
 
       @yield('body')
 
-      <footer class="footer">
-        <p>&copy; Company 2017</p>
-      </footer>
+      @include('layouts.footer')
 
     </div> <!-- /container -->
 
