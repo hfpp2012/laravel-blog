@@ -6,7 +6,7 @@
             <h3>{{ $users->total() }} total users</h3>
             <b>In this page {{ $users->count() }} users</b>
             <ul class='list-group'>
-                @foreach($users as $user)
+                @forelse($users as $user)
                     <li class='list-group-item' style="margin-top: 20px;">
                         <span>{{ $user->name }}</span>
                         <span class="pull-right clearfix">
@@ -14,7 +14,9 @@
                         </span>
                         <button class='btn btn-xs btn-primary'>Follow</button>
                     </li>
-                @endforeach
+                @empty
+                    <li>No users available</li>
+                @endforelse
             </ul>
             {{ $users->links() }}
         </div>
