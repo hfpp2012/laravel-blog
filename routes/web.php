@@ -32,7 +32,7 @@ Route::get('blade', 'PagesController@blade');
 //     return $users;
 // });
 
-Route::get('users', 'UsersController@index');
+Route::get('users', 'UsersController@index')->middleware('authenticated');
 Route::get('users/create', 'UsersController@create');
 Route::post('users', 'UsersController@store');
 
