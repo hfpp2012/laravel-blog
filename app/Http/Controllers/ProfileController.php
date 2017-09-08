@@ -13,7 +13,8 @@ class ProfileController extends Controller
         $user = User::whereUsername($username)->first();
         // $user = User::where('username', $username)->first();
         // $user = User::where('username', '=', $username)->first();
-        return $user;
-        dd($user);
+        // return $user;
+        // dd($user);
+        return view('user.profile', compact('user'));
     }
 }
