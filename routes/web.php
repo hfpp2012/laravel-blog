@@ -13,8 +13,12 @@
 
 Route::get('/', 'PagesController@index');
 
-Route::get('profile', 'PagesController@profile');
-Route::get('settings', 'PagesController@settings');
+
+Route::group(['middleware' => ['authenticated']], function() {
+    Route::get('users', 'UsersController@index');
+    Route::get('profile', 'PagesController@profile');
+    Route::get('settings', 'PagesController@settings');
+});
 
 Route::get('blade', 'PagesController@blade');
 
@@ -32,7 +36,6 @@ Route::get('blade', 'PagesController@blade');
 //     return $users;
 // });
 
-Route::get('users', 'UsersController@index')->middleware('authenticated');
 Route::get('users/create', 'UsersController@create');
 Route::post('users', 'UsersController@store');
 
